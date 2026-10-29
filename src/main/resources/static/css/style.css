@@ -1,0 +1,85 @@
+header {
+    background-color: #1f2937;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 3px solid #16a34a;
+}
+
+
+body{
+    background-color: #111827;
+    color: #f3f4f6;
+    font-family: Arial, sans-serif;
+}
+
+header p {
+    color: #d1d5db;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+
+/* Organiza o conteúdo principal */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* Estiliza cada seção da página */
+section {
+    background-color: #1f2937;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+/* Estiliza os títulos das seções */
+section h2 {
+    color: #22c55e;
+    margin-top: 0;
+}
+
+/* Organiza os campos do formulário */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #111827;
+    color: #f3f4f6;
+    border: 1px solid #4b5563;
+    border-radius: 5px;
+}
+
+/* Estiliza os botões */
+button {
+    background-color: #16a34a;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Muda o verde quando o mouse passa no botão */
+button:hover {
+    background-color: #15803d;
+}
+
+/* Área onde aparecerão os veículos */
+#listaVeiculos {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #4b5563;
+    border-radius: 5px;
+    color: #d1d5db;
+}

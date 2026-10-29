@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,
+           minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RotaCerta - Veiculos </title>
+
+     <!-- Conecta o HTML ao arquivo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <h1>RotaCerta</h1>
+        <p> Sistema de Gestão de custos veicular</p>
+    </header>
+
+    <main >
+        <section>
+            <h2>Cadastrar Veículo</h2>
+
+            <form id = "formVeiculo">
+
+                <label for = "marca">marca:</label>
+                <input type = "text" id = "marca" name = "marca" required >
+
+                <br><br>
+
+                <label for = "modelo">modelo:</label>
+                <input type = "text" id = "modelo" name = "modelo" required>
+
+                    <br><br>
+
+                <label for = "anoFabricacao">Ano de Fabricação:</label>
+                <input type = "number" id = "anoFabricacao" name = "anoFabricacao" required>
+
+                <br><br>
+
+                <label for="anoModelo">Ano do Modelo:</label>
+                <input type = "number" id = "anoModelo" name = "anoModelo" required>
+
+                <br><br>
+
+                <label for = "versao" >Versão:</label>
+                <input type = "text" id = "versao" name = "versao" required>
+
+                <br><br>
+
+                <label for = "motorizacao">motorização:</label>
+                <input type = "text" id = "motorizacao" name = "motorizacao" required>
+
+                <br><br>
+
+                <label for = "combustivel" >Combustível:</label>
+                <select id = "combustivel" name="combustivel" required>
+                    <option value="">Selecione</option>
+                    <option value="GASOLINA">Gasolina</option>
+                    <option value="DIESEL">Diesel</option>
+                    <option value="FLEX">Flex</option>
+                    <option value="ALCOOL">Alcool</option>
+                    <option value="ELETRICO">Elétrico</option>
+                    <option value = "GNV"> Gnv</option>
+                </select>
+
+                <br><br>
+
+                <label for="quilometragem">Quilometragem</label>
+                <input  type = "number" id="quilometragem" name="quilometragem" min="0" required>
+
+                <label for = "estadoUF">Estado (uf)</label>
+                <input type = "text" id=estadoUF name="estadoUF" maxlength="2" required>
+
+                <br><br>
+
+                <button type="submit" >Cadastrar Veículo</button>
+
+            </form>
+            <p id="mensagem"></p>
+        </section>
+
+        <section>
+            <h2>Veículo Cadastrado </h2>
+
+            <button type = "Button" id="atualizarButton">Atualizar Lista</button>
+
+            <div id = "listaVeiculos">"
+            </div>
+        </section>
+    </main>
+</body>
+</html>
