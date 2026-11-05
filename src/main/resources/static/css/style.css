@@ -1,46 +1,66 @@
-header {
-    background-color: #1f2937;
-    padding: 25px;
-    text-align: center;
-    border-bottom: 3px solid #16a34a;
+
+/* CORES PRINCIPAIS DO ROTACERTA */
+:root {
+    --preto: #111111;
+    --cinza: #1f1f1f;
+    --amarelo: #facc15;
+    --amarelo-hover: #eab308;
+    --branco: #f5f5f5;
+    --cinza-texto: #bdbdbd;
 }
 
+/* CONFIGURAÇÕES GERAIS */
+* {
+    box-sizing: border-box;
+}
 
-body{
-    background-color: #111827;
-    color: #f3f4f6;
+body {
+    background-color: var(--preto);
+    color: var(--branco);
     font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* CABEÇALHO DA TELA PRINCIPAL */
+header {
+    background-color: var(--cinza);
+    padding: 25px;
+    text-align: center;
+    border-bottom: 3px solid var(--amarelo);
+}
+
+header h1 {
+    color: var(--amarelo);
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 header p {
-    color: #d1d5db;
-    font-size: 16px;
-    margin-top: 0;
+    color: var(--cinza-texto);
 }
 
-
-/* Organiza o conteúdo principal */
+/* CONTEÚDO PRINCIPAL */
 main {
     max-width: 800px;
     margin: 30px auto;
     padding: 0 15px;
 }
 
-/* Estiliza cada seção da página */
+/* CARTÕES E SEÇÕES */
 section {
-    background-color: #1f2937;
+    background-color: var(--cinza);
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 10px;
+    border: 1px solid #333333;
 }
 
-/* Estiliza os títulos das seções */
 section h2 {
-    color: #22c55e;
+    color: var(--amarelo);
     margin-top: 0;
 }
 
-/* Organiza os campos do formulário */
+/* CAMPOS DO FORMULÁRIO */
 form label {
     display: block;
     margin-bottom: 6px;
@@ -49,20 +69,19 @@ form label {
 
 form input,
 form select {
-    box-sizing: border-box;
     width: 100%;
-    padding: 10px;
+    padding: 11px;
     margin-bottom: 15px;
-    background-color: #111827;
-    color: #f3f4f6;
-    border: 1px solid #4b5563;
+    background-color: var(--preto);
+    color: var(--branco);
+    border: 1px solid #555555;
     border-radius: 5px;
 }
 
-/* Estiliza os botões */
+/* BOTÕES */
 button {
-    background-color: #16a34a;
-    color: white;
+    background-color: var(--amarelo);
+    color: var(--preto);
     padding: 12px 18px;
     border: none;
     border-radius: 5px;
@@ -70,16 +89,120 @@ button {
     font-weight: bold;
 }
 
-/* Muda o verde quando o mouse passa no botão */
 button:hover {
-    background-color: #15803d;
+    background-color: var(--amarelo-hover);
 }
 
-/* Área onde aparecerão os veículos */
+/* LISTA DE VEÍCULOS */
 #listaVeiculos {
     margin-top: 15px;
     padding: 15px;
-    border: 1px solid #4b5563;
+    border: 1px solid #555555;
     border-radius: 5px;
-    color: #d1d5db;
+    color: var(--cinza-texto);
+}
+
+/* CENTRALIZAÇÃO DA TELA DE LOGIN */
+/* TELA DE LOGIN */
+body.login-page main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* CONTAINER PRINCIPAL */
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    min-height: 480px;
+    background-color: var(--cinza);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333333;
+}
+
+/* LADO ESQUERDO */
+.login-esquerda {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.login-esquerda img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login-esquerda h1 {
+    color: var(--amarelo);
+    font-size: 32px;
+    margin: 0 0 15px;
+}
+
+.login-esquerda h2 {
+    color: var(--branco);
+}
+
+.login-esquerda p {
+    color: var(--cinza-texto);
+}
+
+/* LADO DIREITO */
+.login-direita {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-direita h2 {
+    color: var(--amarelo);
+    margin-bottom: 30px;
+}
+
+/* BOTÕES DO LOGIN */
+.login-botoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.login-botoes button {
+    flex: 1;
+}
+
+/* AJUSTE PARA CELULAR */
+@media (max-width: 650px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-esquerda,
+    .login-direita {
+        width: 100%;
+        padding: 25px;
+    }
+}
+
+body.login-page section h1 {
+    color: var(--amarelo);
+}
+
+body.login-page section p {
+    color: var(--cinza-texto);
+}
+
+body.login-page img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
 }
