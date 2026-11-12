@@ -9,7 +9,7 @@
     <title>RotaCerta - Veiculos </title>
 
      <!-- Conecta o HTML ao arquivo CSS -->
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -71,7 +71,7 @@
                 <input  type = "number" id="quilometragem" name="quilometragem" min="0" required>
 
                 <label for = "estadoUF">Estado (uf)</label>
-                <input type = "text" id=estadoUF name="estadoUF" maxlength="2" required>
+                <input type ="text" id="estadoUF" name="estadoUF" maxlength="2" required>
 
                 <br><br>
 
@@ -86,9 +86,10 @@
 
             <button type = "Button" id="atualizarButton">Atualizar Lista</button>
 
-            <div id = "listaVeiculos">"
-            </div>
+            <div id = "listaVeiculos"></div>
         </section>
     </main>
+
+    <script> src="js/veiculos.js"</script>
 </body>
 </html>
