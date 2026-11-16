@@ -23,7 +23,10 @@ public class VeiculoController {
    }
 
    @GetMapping
-    public List<VeiculoModel> listarVeiculos(){
+    public List<VeiculoModel> listarVeiculos(@RequestParam(required = false) Long usuarioId){
+        if(usuarioId != null){
+            return veiculoservices.listarporUsuario(usuarioId);
+        }
         return veiculoservices.listarTodosVeiculos();
    }
 

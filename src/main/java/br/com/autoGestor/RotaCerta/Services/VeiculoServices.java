@@ -27,6 +27,10 @@ public class VeiculoServices {
         return veiculorepository.findAll();
     }
 
+    public List<VeiculoModel> listarporUsuario(Long usuarioid){
+        return veiculorepository.findByUsuarioId(usuarioid);
+    }
+
     public VeiculoModel buscarPorId(Long id){
         return veiculorepository.findById(id).orElseThrow(() ->
         new ResponseStatusException(HttpStatus.NOT_FOUND, " Veículo nao encontrado"));
@@ -34,8 +38,9 @@ public class VeiculoServices {
 
    public VeiculoModel atualizarVeiculo(Long id, VeiculoModel veiculosmodel){
         VeiculoModel veiculo = buscarPorId(id);
-        if (veiculo.getQuilometragem() < veiculosmodel.getQuilometragem()){
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "a Quilometragem não pode diminuir");
+        if ( veiculosmodel.getQuilometragem() == null
+                ||veiculosmodel.getQuilometragem() < veiculo.getQuilometragem()){
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Quilometragem inválida, ou menor que a atual");
         }
         veiculo.setMarca(veiculosmodel.getMarca());
         veiculo.setModelo(veiculosmodel.getModelo());

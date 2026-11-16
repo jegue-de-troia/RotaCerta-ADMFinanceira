@@ -8,6 +8,7 @@ public class VeiculoModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id ;
 
+    private Long usuarioId;
     private String marca;
     private String modelo;
     private Integer anoFabricacao;
@@ -19,10 +20,11 @@ public class VeiculoModel {
     private Integer quilometragem;
     private String estadoUF;
 
-    public VeiculoModel(Long id, String marca, String modelo, Integer anoFabricacao, Integer anoModelo,
+    public VeiculoModel(Long id, Long usuarioId, String marca, String modelo, Integer anoFabricacao, Integer anoModelo,
                         String versao, String motorizacao, Combustivel combustivel, Integer quilometragem,
                         String estadoUF) {
         this.id = id;
+        this.usuarioId = usuarioId;
         this.marca = marca;
         this.modelo = modelo;
         this.anoFabricacao = anoFabricacao;
@@ -44,6 +46,10 @@ public class VeiculoModel {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public Long getUsuarioId() { return usuarioId; }
+
+    public void setUsuarioId(Long usuarioId) { this.usuarioId = usuarioId; }
 
     public String getMarca() {
         return marca;
